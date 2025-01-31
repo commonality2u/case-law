@@ -8,6 +8,9 @@ https://b07c-192-41-114-227.ngrok-free.app
 # News
 &bull;[01/27] A basic demo of 30 points CW search engine，contains a frontend and backend work on the tutorial dataset.
 
+# Architecture Diagram
+<img width="1043" alt="image" src="https://github.com/user-attachments/assets/9a774a9c-b595-4884-918f-e2c73ea5ab51" />
+
 # Getting Started
 1. Install python, flask, streamlit
 2. ```python backend.py```
