@@ -3,6 +3,8 @@ This project implements a complete case law search engine
 
 Provides comprehensive backend support for data collection, indexing, searching, and ranking, along with an innovative frontend.
 
+**项目设计**：https://docs.google.com/document/d/1iR4dWmn3iGjx4eRBEfEKTltBKUH3y0mSwQlzFSzifXU/edit?usp=sharing
+
 # Roadmap
 
 **Data collection**
