@@ -41,6 +41,10 @@ Provides comprehensive backend support for data collection, indexing, searching,
 - [ ] 自动纠错（auto correction）
 - [ ] 同义词转化
 
+**Evaluations**
+- [ ] 统计系统每个阶段用时，评估效率
+- [ ] 评估搜索结果
+
 # Demo 
 Click this link to quickly view the deployed project：
 https://b07c-192-41-114-227.ngrok-free.app
