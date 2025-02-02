@@ -1,6 +1,7 @@
 # TTDS_CW3
-This project implements a case law search engine 
-search engine,start from
+This project implements a complete case law search engine 
+
+Provides comprehensive backend support for data collection, indexing, searching, and ranking, along with an innovative frontend.
 
 # Roadmap
 
