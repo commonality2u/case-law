@@ -16,15 +16,17 @@ Provides comprehensive backend support for data collection, indexing, searching,
 - [ ] 查询纠错
 
 基础搜索 
-- [ ] 搜案例
-- [ ] 搜法条
+- [ ] 搜案例，搜法条
+- [ ] 检索结果展示，时间轴
+- [ ] 可视化，时间分布，法院占比
 - [ ] 筛选条件
-- [ ] 年份可视化
-- [ ] 时间轴可视化
+- [ ] 按相关性排序，按时间排序
+- [ ] 高亮词
+- [ ] AI总结
 
 AI搜索
-- [ ] query转化为向量召回案例
-- [ ] 结合Deppseek进行生成 
+- [ ] 根据输入的query，召回10个相关案例
+- [ ] 增强deep seek r1 生成可能判的罪，以及怎么判
 
 
 **DBMS**
