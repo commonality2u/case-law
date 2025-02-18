@@ -23,8 +23,8 @@ Provides comprehensive backend support for data collection, indexing, searching,
 - [ ] 时间轴可视化
 
 AI搜索
-- [ ] 
-- [ ] Deppseek
+- [ ] query转化为向量召回案例
+- [ ] 结合Deppseek进行生成 
 
 
 **DBMS**
@@ -45,8 +45,8 @@ AI搜索
 
 **搜索**
 - [ ] query处理为token
-- [ ] 处理每一类的查询
-- [ ] 
+- [ ] 处理三类查询，高级搜索
+- [ ] 返回未排序文档
 
 **排序**
 - [ ] 采用混排策略，融合BM25和vector相关性
