@@ -6,48 +6,56 @@ Provides comprehensive backend support for data collection, indexing, searching,
 **项目设计**：https://docs.google.com/document/d/1iR4dWmn3iGjx4eRBEfEKTltBKUH3y0mSwQlzFSzifXU/edit?usp=sharing
 
 # Roadmap
+**Frontend** 
 
-**Data collection**
-- [ ] 结构化现有数据集（主来源）https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
-- [ ] 爬取并结构化每天定时更新新的判决（增量）https://github.com/isaacus-dev/open-australian-legal-corpus-creator?tab=readme-ov-file 
-- [ ] 以 id,title,text,（time...）作为标准格式，存入mongodb
+欢迎页 
 
-**Backend**
-- [ ] 引入MongoDB取代文件，以标准格式改造使用
-- [ ] 后端解耦 为索引（倒排，向量），搜索，排序
-      
-索引
-- [ ] 索引优化（增量编码） 支持rocksdb
-- [ ] 支持增量索引重建
-- [ ] 向量化处理
+- [ ] 搜索框
+- [ ] 显示总共多少，新增多少
+- [ ] 查询补全
+- [ ] 查询纠错
 
-检索
-- [ ] 统一处理query，识别各检索类型并调用
-- [ ] 返回未排序检索结果list
+基础搜索 
+- [ ] 搜案例
+- [ ] 搜法条
+- [ ] 筛选条件
+- [ ] 年份可视化
+- [ ] 时间轴可视化
 
-排序
-- [ ] 采用混排策略，BM25作为初步召回
-- [ ] 对Top100执行向量化搜索计算语义匹配得分
+AI搜索
+- [ ] 
+- [ ] Deppseek
 
-**Frontend**
-- [ ] 熟悉feature在搜索框中的组件实现
-- [ ] 高亮搜索词
-- [ ] 尝试gpt-like对话框
-- [ ] 动画探索
 
-**Features**
-- [ ] 处理自然语言query，增加意图分析
-- [ ] 自动补全（auto complete）
-- [ ] 自动纠错（auto correction）
-- [ ] 同义词转化
+**DBMS**
+- [ ] mongodb(原始文件), RocksDB(倒排索引)，FAISS（向量数据库）
+- [ ] Mongodb，1.id->文档内容 2.返回总共多少，新增多少
+- [ ] RocksDB，2.token->索引
+- [ ] FAISS，1.query的vector->相似的向量
+
+**数据收集**
+- [ ] 主数据案例收集 https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
+- [ ] 新数据收集 https://github.com/isaacus-dev/open-australian-legal-corpus-creator?tab=readme-ov-file 
+- [ ] 标准格式  id,title,text,（time...）
+
+**索引**
+- [ ] 建立倒排索引存入RocksDB
+- [ ] 优化，跳表，
+- [ ] 分割成chunks，生成embedding，存入FAISS，
+
+**搜索**
+- [ ] query处理为token
+- [ ] 处理每一类的查询
+- [ ] 
+
+**排序**
+- [ ] 采用混排策略，融合BM25和vector相关性
+- [ ] 返回排序好的文档
 
 **Evaluations**
-- [ ] 统计系统每个阶段用时，评估效率
+- [ ] 每个查询类型，查询速度
 - [ ] 评估搜索结果
 
-# Demo 
-Click this link to quickly view the deployed project：
-https://b07c-192-41-114-227.ngrok-free.app
 
 # News
 &bull;[01/27] A basic demo of 30 points CW search engine，contains a frontend and backend work on the tutorial dataset.
@@ -56,11 +64,7 @@ https://b07c-192-41-114-227.ngrok-free.app
 <img width="1043" alt="image" src="https://github.com/user-attachments/assets/9a774a9c-b595-4884-918f-e2c73ea5ab51" />
 
 # Getting Started
-1. Install python, flask, streamlit
-2. ```python backend.py```
-to run backend  
-3. ```streamlit run frontend.py```
-to run fronend
+
 
 
 
