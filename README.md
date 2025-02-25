@@ -34,16 +34,23 @@ AI搜索
 - [ ] FAISS，1.query的vector->相似的向量 @ZZY
 
 **数据收集** @FRAN
-- [ ] 主数据案例收集 https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
-- [ ] 分开不同类型，分成多个表 立法，和案例
-- [ ] 数据缺的，缺时间的，删
-- [ ] 标准格式  id,citation,text,（ juris..）
+- [X] 主数据案例收集 https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
+- [X] 分开不同类型，两个表 立法，和案例
+- [X] 数据缺的，缺时间的，删
+- [X] 标准格式  id,citation,text,（ juris..）
 
 - [ ] 新数据收集 https://github.com/isaacus-dev/open-australian-legal-corpus-creator?tab=readme-ov-file 
 
 **索引** @ZZY
-- [ ] 建立倒排索引存入RocksDB
-- [ ] 优化，跳表，
+- [X] 建立立法和案例的索引
+- [X] FST
+- [X] delta 
+- [X] vbyte
+- [ ] 处理更新
+- [ ] 提速
+
+
+
 - [ ] 分割成chunks，生成embedding，存入FAISS，
 
 **搜索**
