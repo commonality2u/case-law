@@ -16,9 +16,9 @@ Provides a fashion front-end and robust backend contains 1.Live data collection,
 # Roadmap
 
 **API**
-- [ ] id->文档信息，文档内容
 - [ ] get court case和legislation的统计信息 @FRAN
-- [ ] query->1.搜索结果列表，包含基本信息，答案统计信息
+- [x] id,collection>文档信息，文档内容
+- [x] query+...->1.搜索结果, 分页信息，统计信息。
 - [ ] 补全改错
       
 **Deploy**
@@ -29,34 +29,37 @@ Provides a fashion front-end and robust backend contains 1.Live data collection,
 
 
 **Frontend** @ZYN @QMY
-- [ ] 导航页跳转 @YANG
 - [ ] 显示总共多少，新增多少 @FRAN
+
 - [ ] 查询补全 @YANG
 - [ ] 查询纠错 @YANG
 
 基础搜索 
-- [ ] 案例，法条选择  
-- [ ] 检索结果展示 @ZZY
-- [ ] 可视化（时间分布，法院占比） @ZZY
-- [ ] 筛选条件
-- [ ] 高亮词
+- [x] 案例，法条选择  
+- [x] 检索结果展示 @ZZY
+- [x] 可视化（时间分布，法院占比） @ZZY
+- [x] 筛选条件（时间，source）可拓展
+- [x] 分页
+
 
 **数据收集** @FRAN
-- [X] 主数据案例收集 https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
-- [X] 数据清理 生成两个表，court case和legislation
-- [ ] 定时新数据收集，数据库更新，触发索引 https://github.com/isaacus-dev/open-australian-legal-corpus-creator?tab=readme-ov-file 
+- [X] 主数据案例收集9GB https://huggingface.co/datasets/isaacus/open-australian-legal-corpus 
+- [X] 数据清理 court case和legislation存入MongoDB，调整顺序，并行批量存入
+- [ ] 定时，爬取额外的新数据，生成增量文档，存入数据库，触发索引重建call
 
 **索引** @ZZY
-- [X] 分别建立立法和案例的索引，FST提效，delta，vbyte降本
-- [ ] 增量索引
+- [X] 分别建立立法和案例的索引，FST提效，delta，vbyte降本，统计词序
 
 **搜索**
-- [ ] 处理布尔搜索，词组搜索，临近搜索
-- [ ] 查询合并优化
+- [x] 处理布尔搜索，词组搜索，临近搜索
+- [x] 查询合并优化，交集加速
 
 **排序**
-- [ ] 对于court case和legislation调整的BM25
-- [ ] Bert对前100文档的精排
+- [ ] 对于court case和legislation调整不同的BM25参数
+- [ ] 不同词性的词有不同的权重
+
+优化 
+小字典优化bm25
 
 **Evaluations**
 
